@@ -57,10 +57,23 @@
 </div>
 </fieldset>
 </form>
- </div>
+
+
+ 
 
   <!-- Rating state end -->
 
   <script src="script.js"></script>
+  <script>
+function displayRadioValue() {
+   var ele = document.getElementsByName('feedback');
+
+   for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked)
+       console.log("Feedback mark: " + ele[i].value);
+   }
+}
+
+  </script>
 </body>
 </html>
