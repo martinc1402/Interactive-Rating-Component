@@ -15,11 +15,12 @@
 <body>
 
   <!-- Rating state start -->
-  <div role="main" class="main-container">
-    <div class="img-container">
-      <img src="images/icon-star.svg" alt="an icon of an orange star"/>
+  <div role="main" class="main-container" id="main-container">
+    <div class="img-container-alternate">
+      <!-- <img src="images/icon-star.svg" alt="an icon of an orange star"/> -->
+      <img src="images/illustration-thank-you.svg" alt="an image of a credit card, an eftpos machine and a receipt"/>
     </div>
-  <h1 class="main-heading">How did we do?</h1>
+  <h1 id="main-heading" class="main-heading">How did we do?</h1>
   <form class="rating-form">
 <fieldset>
   <legend class="rating-description">Please let us know how we did with your support request. All feedback is appreciated 
@@ -53,7 +54,7 @@
 
 </div>
 <div class="submit-button-container">
-  <button type="submit" class="submit-button">Submit</button>
+  <button type="button" id="submit-button" class="submit-button">Submit</button>
 </div>
 </fieldset>
 </form>
@@ -64,16 +65,6 @@
   <!-- Rating state end -->
 
   <script src="script.js"></script>
-  <script>
-function displayRadioValue() {
-   var ele = document.getElementsByName('feedback');
 
-   for (i = 0; i < ele.length; i++) {
-    if (ele[i].checked)
-       console.log("Feedback mark: " + ele[i].value);
-   }
-}
-
-  </script>
 </body>
 </html>

@@ -13,6 +13,7 @@ body {
 
 .main-container {
 max-width: 95vw;
+min-width: 400px;
 margin: 0 auto;
 background-color: hsla(215, 20%, 17%, 0.8);
 color: 	hsl(0, 0%, 100%);
@@ -56,6 +57,10 @@ fieldset {
   margin-bottom: 2rem;
   position: relative;
   margin-top: 1rem;
+}
+
+input[type=radio]:checked +label {
+    color: hsla(216, 12%, 8%, 0.4);
 }
 
 .rating-button-container {
@@ -115,4 +120,41 @@ transform: translate(-2.4rem, 0.2rem);
     cursor: pointer;
 }
 
+/* Styles for after Form Submission */
 
+.main-heading-alternate {
+    font-size: 14px;
+    color: hsl(25, 97%, 53%);
+    padding: 0.6rem;
+    background-color: hsl(213, 19%, 18%);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 200px;
+    font-weight: 400;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+
+}
+
+.img-container-alternate {
+ text-align: center;
+ margin-top: 1rem;
+ margin-bottom: 1.5rem;
+}
+
+.sub-heading-alternate {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.rating-description-alternate {
+    color: hsla(217, 12%, 63%, 0.8);
+    line-height: 1.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* End of Styles for after Form Submission */
