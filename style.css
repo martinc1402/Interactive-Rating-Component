@@ -157,4 +157,10 @@ transform: translate(-2.4rem, 0.2rem);
     text-align: center;
 }
 
+.error-message {
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
 /* End of Styles for after Form Submission */
