@@ -1,24 +1,33 @@
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Overpass', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     background-color: hsl(216, 12%, 8%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .main-container {
-max-width: 95vw;
-min-width: 400px;
-margin: 0 auto;
+transform: translateY(-1rem);
+max-width: 412px;
+min-width: 327px;
+min-height: 360px;
 background-color: hsla(215, 20%, 17%, 0.8);
 color: 	hsl(0, 0%, 100%);
 border-radius: 0.8rem;
-padding: 2rem 2.7rem;
+padding: 1.5rem 1.8rem;
 }
 
 .img-container {
@@ -38,7 +47,8 @@ padding: 2rem 2.7rem;
 
 .rating-description {
     color: hsla(217, 12%, 63%, 0.8);
-    line-height: 1.8rem;
+    line-height: 1.7rem;
+    margin-top: 0.4rem;
     margin-bottom: 1.2rem;
     font-size: 1.1rem;
     font-weight: 300;
@@ -49,14 +59,18 @@ fieldset {
     border: none;
     margin: 0;
     padding: 0;
+    min-width: 0;
 }
 
 .rating-buttons {
     display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  position: relative;
-  margin-top: 1rem;
+  justify-content: space-around;
+ align-items: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0.8rem;
+}
+input[type=radio]:hover + label {
+    color: hsl(0, 0%, 100%);
 }
 
 input[type=radio]:checked +label {
@@ -64,10 +78,10 @@ input[type=radio]:checked +label {
 }
 
 .rating-button-container {
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -75,11 +89,11 @@ input[type=radio]:checked +label {
 .rating-button {
     -webkit-appearance:none;
     appearance: none;
-    z-index: 1;
-    background-color: hsla(213, 19%, 18%, 0.8);
-    height: 4rem;
-    width: 4rem;
+   background-color: hsl(213, 19%, 18%);
+    height: 3.2rem;
+    width: 3.2rem;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .rating-button:hover {
@@ -96,12 +110,12 @@ input[type=radio]:checked +label {
     color: 	hsl(216, 12%, 54%);
     font-weight: 700;
     font-size: 1.2rem;
-transform: translate(-2.4rem, 0.2rem);
+transform: translate(-2rem, 0.2rem);
     z-index: 2;
 }
 
+
 .submit-button {
-    min-width: 100%;
     border: 0;
     padding: 1.2rem 2rem;
     border-radius: 30px;
@@ -109,9 +123,10 @@ transform: translate(-2.4rem, 0.2rem);
     letter-spacing: 0.2rem;
     color: hsl(0, 0%, 100%);
     background-color: hsl(25, 97%, 53%);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 0.4rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .submit-button:active {

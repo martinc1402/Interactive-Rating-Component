@@ -3,6 +3,11 @@ const output = document.querySelector('#output');
 const radioButtons = document.querySelectorAll('input[name="feedback"]');
 //Initiate a variable for the main div, to be used below
 const mainContainer = document.getElementById('main-container');
+// Initiate a variable for the alternate image and have it set as display none by default
+let alternateImage = document.getElementById('icon-alternate');
+alternateImage.style.display = 'none';
+// Initiate a variable for the image container
+let imageContainer = document.getElementById('img-container');
 
 btn.addEventListener("click", () => {
   let selectedAmount;
@@ -19,11 +24,26 @@ selectedAmount ? formSuccess(selectedAmount) : formFail();
 });
 
 function formSuccess(rating) {
+  //In case the error message is still appearing we need to make it dissapear when the user does succesfully submit
+  let errorRemove = document.getElementById('errorMessage');
+
+  if(errorRemove) {
+    errorRemove.style.display = 'none';
+  }
+
 //Remove elements that we no longer need
   let headingElement = document.getElementById('main-heading');
   headingElement.classList.remove("main-heading");
   let formElement = document.getElementsByClassName("rating-form");
   formElement[0].remove();
+  let starImage = document.getElementById('icon');
+  starImage.remove();
+  // Change class for image container
+  imageContainer.classList.remove('img-container');
+  imageContainer.classList.add('img-container-alternate');
+
+  //Add alternate image
+  alternateImage.style.display = 'inline-block';
 
 //Add a new heading in small orange text with the rating added dynamically
   headingElement.classList.add("main-heading-alternate");
@@ -61,8 +81,7 @@ function formFail() {
    mainContainer.appendChild(errorMessage);
    //Remove the text after 10 seconds
    setTimeout(() => {
-      const errorRemove = document.getElementById('errorMessage');
-
+      let errorRemove = document.getElementById('errorMessage');
       //remove element from DOM
       errorRemove.style.display = 'none';
    }, 10000);
